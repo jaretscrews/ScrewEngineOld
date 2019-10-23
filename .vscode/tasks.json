@@ -24,7 +24,7 @@
             "options": {
                 "cwd": "${workspaceFolder}/build"
             },
-            "command": "./screw-engine",
+            "command": "./ScrewEngine",
             "problemMatcher": [
                 "$gcc"
             ],
