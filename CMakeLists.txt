@@ -9,6 +9,7 @@ set(CMAKE_CXX_FLAGS "-std=c++17 -Wall -Wextra -Werror -Wpedantic -pedantic-error
 set(SOURCE_FILES
     src/main.cpp
     src/ScrewDisplay.cpp
+    src/ScrewRenderer.cpp
 )
 
 add_executable(screw-engine ${SOURCE_FILES})

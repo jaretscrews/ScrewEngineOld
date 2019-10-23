@@ -4,7 +4,8 @@
 namespace ScrewEngine
 {
     ScrewDisplay::ScrewDisplay() :
-        window(nullptr)
+        window(nullptr),
+        renderer()
     {
         SDL_Init(SDL_INIT_VIDEO);
 
@@ -16,6 +17,8 @@ namespace ScrewEngine
             480,
             0
         );
+
+        renderer.Init(window);
     }
 
     ScrewDisplay::~ScrewDisplay()
@@ -23,8 +26,8 @@ namespace ScrewEngine
         SDL_DestroyWindow(window);
     }
 
-    SDL_Window* ScrewDisplay::GetWindow()
+    void ScrewDisplay::Tick()
     {
-        return window;
+        renderer.PaintFrame();
     }
 }

@@ -1,5 +1,7 @@
 #pragma once
 
+#include "ScrewRenderer.h"
+
 class SDL_Window;
 
 namespace ScrewEngine
@@ -9,8 +11,11 @@ namespace ScrewEngine
     public:
         ScrewDisplay();
         ~ScrewDisplay();
-        SDL_Window* GetWindow();  
+
+        void Tick();
     private:
         SDL_Window* window;
+
+        ScrewRenderer renderer;
     };
 }

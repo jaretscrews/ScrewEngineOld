@@ -19,7 +19,7 @@
             }
         },
         {
-            "label": "run game",
+            "label": "run ScrewEngine",
             "type": "shell",
             "options": {
                 "cwd": "${workspaceFolder}/build"
@@ -27,7 +27,11 @@
             "command": "./screw-engine",
             "problemMatcher": [
                 "$gcc"
-            ]
+            ],
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            }
         }
     ]
 }
