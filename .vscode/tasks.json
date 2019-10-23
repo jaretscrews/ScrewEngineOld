@@ -4,7 +4,7 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "build",
+            "label": "build screw-engine",
             "type": "shell",
             "options": {
                 "cwd": "${workspaceFolder}/build"
@@ -12,7 +12,11 @@
             "command": "cmake .. && make",
             "problemMatcher": [
                 "$gcc"
-            ]
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
         },
         {
             "label": "run game",
