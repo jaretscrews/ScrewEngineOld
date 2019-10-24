@@ -10,7 +10,7 @@ namespace ScrewEngine
         SDL_Init(SDL_INIT_VIDEO);
 
         window = SDL_CreateWindow(
-            "SDL2Test",
+            "ScrewEngine",
             SDL_WINDOWPOS_UNDEFINED,
             SDL_WINDOWPOS_UNDEFINED,
             480,

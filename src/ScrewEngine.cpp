@@ -1,16 +1,22 @@
 #include "SDL2/SDL.h" 
 
 #include "ScrewDisplay.h"
+#include "ScrewInput.h"
 
 using namespace ScrewEngine;
 
 int main(void)
 {
     ScrewDisplay display;
+    ScrewInput input;
     
-    display.Tick();
-    
-    SDL_Delay(3000);
+    for(;;)
+    {
+        display.Tick();
+        input.Tick();
+        if(input.ShouldExit())
+            break;
+    }
 
     SDL_Quit();
 
