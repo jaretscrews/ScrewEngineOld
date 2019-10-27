@@ -22,11 +22,9 @@ namespace ScrewEngine
                 break;
                 
             case SDL_KEYDOWN:
-                printf( "Key press detected\n" );
                 break;
 
             case SDL_KEYUP:
-                printf( "Key release detected\n" );
                 break;
 
             default:
