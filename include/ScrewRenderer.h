@@ -1,6 +1,7 @@
 #pragma once
 
 #include "ScrewBaseCompnent.h"
+#include "SDL.h"
 
 class SDL_Renderer;
 class SDL_Window;
