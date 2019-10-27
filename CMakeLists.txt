@@ -13,6 +13,7 @@ set(SOURCE_FILES
     src/ScrewDisplay.cpp
     src/ScrewRenderer.cpp
     src/ScrewInput.cpp
+    src/ScrewClock.cpp
 )
 
 add_executable(ScrewEngine ${SOURCE_FILES})

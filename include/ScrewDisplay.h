@@ -3,6 +3,8 @@
 #include "ScrewRenderer.h"
 #include "ScrewBaseCompnent.h"
 
+#include <string>
+
 class SDL_Window;
 
 namespace ScrewEngine
@@ -10,13 +12,18 @@ namespace ScrewEngine
     class ScrewDisplay : public ScrewBaseCompnent
     {
     public:
-        ScrewDisplay();
+        ScrewDisplay(std::string name, uint16_t width, uint16_t height);
         ~ScrewDisplay();
 
-        void Tick() override;
+        // Delete unwanted constructors
+        ScrewDisplay() = delete;
+
+        void Update(uint32_t deltaTime) override;
     private:
         SDL_Window* window;
-
+        std::string windowName;
+        uint16_t windowWidth;
+        uint16_t windowHeight;
         ScrewRenderer renderer;
     };
 }

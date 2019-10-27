@@ -21,6 +21,11 @@ namespace ScrewEngine
             throw std::runtime_error("Couldn't initialize renderer");
     }
 
+    void ScrewRenderer::Update(uint32_t)
+    {
+        PaintFrame();
+    }
+
     void ScrewRenderer::PaintFrame()
     {
         SDL_SetRenderDrawColor(renderer, 0, 255, 0, SDL_ALPHA_OPAQUE);

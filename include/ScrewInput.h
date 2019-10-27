@@ -11,7 +11,7 @@ namespace ScrewEngine
         ScrewInput();
         ~ScrewInput();
 
-        void Tick() override;
+        void Update(uint32_t deltaTime) override;
         bool ShouldExit();
     private:
         SDL_Event event;

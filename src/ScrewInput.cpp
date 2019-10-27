@@ -12,15 +12,14 @@ namespace ScrewEngine
     {
     }
 
-    void ScrewInput::Tick()
+    void ScrewInput::Update(uint32_t)
     {
         while( SDL_PollEvent( &event ) ){
-            /* We are only worried about SDL_KEYDOWN and SDL_KEYUP events */
             switch( event.type ){
             case SDL_QUIT:
                 shouldExit = true;
                 break;
-                
+
             case SDL_KEYDOWN:
                 printf( "Key press detected\n" );
                 break;
